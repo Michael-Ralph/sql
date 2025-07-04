@@ -1,29 +1,27 @@
-# sql
-
 -- ========================================
 -- 3. PRACTICE QUERIES - TRY THESE!
 -- ========================================
 
 -- BASIC QUERIES
--- 1. Select all customers
+-- 1. Select all customers DONE
 SELECT * FROM customers;
 
--- 2. Find all products under $100
+-- 2. Find all products under $100 DONE
 SELECT product_name, price FROM products WHERE price < 100;
 
--- 3. Count total number of orders
+-- 3. Count total number of orders DONE 
 SELECT COUNT(*) as total_orders FROM orders;
 
--- 4. Find customers from Texas
+-- 4. Find customers from Texas DONE
 SELECT first_name, last_name, city FROM customers WHERE state = 'TX';
 
 -- INTERMEDIATE QUERIES WITH JOINS
--- 5. Show all orders with customer names
+-- 5. Show all orders with customer names DONE
 SELECT o.order_id, c.first_name, c.last_name, o.order_date, o.total_amount
 FROM orders o
 JOIN customers c ON o.customer_id = c.customer_id;
 
--- 6. Products with their category names
+-- 6. Products with their category names DONE
 SELECT p.product_name, c.category_name, p.price
 FROM products p
 JOIN categories c ON p.category_id = c.category_id;
