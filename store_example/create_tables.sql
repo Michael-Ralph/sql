@@ -1,3 +1,9 @@
+CREATE TABLE categories (
+    category_id SERIAL PRIMARY KEY,
+    category_name VARCHAR(50) NOT NULL,
+    description TEXT
+);
+
 CREATE TABLE customers (
     customer_id SERIAL PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
@@ -7,12 +13,6 @@ CREATE TABLE customers (
     city VARCHAR(50),
     state VARCHAR(2),
     registration_date DATE DEFAULT CURRENT_DATE
-);
-
-CREATE TABLE categories (
-    category_id SERIAL PRIMARY KEY,
-    category_name VARCHAR(50) NOT NULL,
-    description TEXT
 );
 
 CREATE TABLE products (
@@ -39,4 +39,3 @@ CREATE TABLE order_items (
     quantity INTEGER NOT NULL,
     unit_price DECIMAL(10,2) NOT NULL
 );
-
